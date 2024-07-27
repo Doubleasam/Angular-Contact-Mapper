@@ -20,7 +20,7 @@ export class AddContactComponent implements OnInit {
   ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
-      phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]{11}$')]],
       email: ['', [Validators.required, Validators.email]],
       addresses: this.fb.array([], Validators.maxLength(5)),
       longitude: ['', Validators.required],
