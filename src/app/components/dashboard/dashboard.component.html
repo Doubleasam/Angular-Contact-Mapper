@@ -1,0 +1,29 @@
+<div class="container">
+  <div>
+    <!-- Table View Code -->
+    <table class="contact-table">
+      <thead>
+        <tr>
+          <th class="fixed-width">Name</th>
+          <th class="fixed-width">Phone Number</th>
+          <th class="fixed-width">Email</th>
+          <th class="fixed-width">Address</th>
+          <th class="fixed-width">Longitude</th>
+          <th class="fixed-width">Latitude</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts">
+          <td>{{ contact.name }}</td>
+          <td>{{ contact.phoneNumber }}</td>
+          <td>{{ contact.email }}</td>
+          <td>{{ contact.randomAddress }}</td>
+          <td>{{ contact.longitude }}</td>
+          <td>{{ contact.latitude }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="map" class="map-container"></div>
+</div>
